@@ -1,7 +1,7 @@
 <template>
   <section>
     <!-- Hero Image -->
-    <div id="hero">
+    <div id="hero w-100 m-4">
       <img src="/images/molly-jason-achandler-316.jpg">
     </div>
     <!-- Invitation -->
@@ -14,11 +14,30 @@
       </div>
     </div>
     <!-- Countdown -->
+    <div class="text-center text-4xl">
+      <h1>JUST THE TWO OF US</h1>
+      <vue-countdown :time="time" v-slot="{ days, hours, minutes, seconds }">
+        {{ days }} days, {{ hours }} hours, {{ minutes }} minutes
+      </vue-countdown>
+    </div>
   </section>
 </template>
 
 <script>
-export default {};
+import VueCountdown from '@chenfengyuan/vue-countdown';
+
+export default {
+  components: { VueCountdown },
+  data() {
+    const now = new Date();
+    const weddingDay = new Date('April 26, 2025 18:00:00');
+    console.log(weddingDay)
+
+    return {
+      time: weddingDay - now,
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>
