@@ -4,7 +4,7 @@
     <li><router-link to="/our-story" :class=navLink>Our Story</router-link></li>
     <li><router-link to="/schedule" :class=navLink>Schedule</router-link></li>
     <li><router-link to="/rsvp" :class=navLink>RSVP</router-link></li>
-    <li><router-link to="/travel-info" :class=navLink>Travel Info</router-link></li>
+    <li><router-link to="/travel-info" :class=navLink>Travel</router-link></li>
     <li><router-link to="/registry" :class=navLink>Registry</router-link></li>
   </ul>
 </template>
@@ -18,7 +18,7 @@
   }
 </script>
 
-<style scoped>
+<style>
 a::before {
   content: "";
   position: absolute;
@@ -34,5 +34,9 @@ a::before {
 
 a:hover::before {
   transform: scaleX(1);
+}
+
+li {
+  padding: 0.25rem;
 }
 </style>

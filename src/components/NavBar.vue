@@ -1,13 +1,13 @@
 <template>
   <header>
-    <nav class="fixed w-full bg-white p-5 m-auto top-0 z-10 animated">
+    <nav class="fixed w-full bg-white shadow-lg py-3 px-5 m-auto top-0 z-10 animated">
       <div class="flex items-center justify-between">
         <div>
           <router-link to="/" class="script text-4xl/none p-4">
             <span>Molly & Jason</span>
           </router-link>
         </div>
-        <div class="hidden lg:flex muli-font">
+        <div class="hidden lg:flex uppercase tracking-widest text-xs">
           <NavLinks :navLink=navLink :mobileStyle=false />
         </div>
         <button id="menu-toggle" class="lg:hidden w-10 h-10 relative" aria-label="Expand Menu" @click="toggleNavbar">
@@ -18,7 +18,7 @@
           </div>
         </button>
       </div>
-      <div :class="[showMenu ? 'open' : 'closed']" class="lg:hidden muli-font">
+      <div :class="[showMenu ? 'open' : 'closed']" class="lg:hidden bg-white uppercase tracking-widest text-xs">
         <NavLinks :navLink=navLink :mobileStyle=true />
       </div>
     </nav>
@@ -33,7 +33,7 @@
     components: { NavLinks },
     data() {
       return {
-        navLink: 'link no-underline px-4 py-1',
+        navLink: 'link relative no-underline px-4 py-1',
         showMenu: false,
       }
     },
@@ -41,6 +41,11 @@
       toggleNavbar() {
         this.showMenu = !this.showMenu;
 
+      }
+    },
+    watch: {
+      '$route' () {
+        this.showMenu = false
       }
     }
   }
