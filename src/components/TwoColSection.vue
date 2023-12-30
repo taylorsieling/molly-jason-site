@@ -15,7 +15,7 @@
       </p>
     </div>
     <div class="hero basis-1/2">
-      <img :src=rightImage class="object-cover">
+      <img :src=rightImage class="object-cover" alt="Molly and Jason hold hands on the beach.">
       <div class="hero-overlay bg-slate-600/20"></div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center p-8 md:py-4 md:px-48">
+  <div class="text-center p-4 md:py-4 md:px-8">
     <div class="pt-12">
       <p class="text-sm uppercase tracking-wide mb-4">
         <slot name="supertitle"></slot>

@@ -18,7 +18,7 @@
     <div id="cd-container" class="container w-9/12 text-stone-500 mx-auto my-8 p-12">
       <p class="text-xl text-center uppercase tracking-widest mb-12">Let the countdown begin!</p>        
       <vue-countdown :time="time" v-slot="{ days, hours, minutes, seconds }">
-        <div class="flex justify-between text-center">
+        <div class="flex flex-col md:flex-row justify-between text-center">
           <div :class=cdClass>
             <span class="text-9xl leading-3 cormorant italic mb-20">{{ days }}</span>
             <span class="text-base tracking-widest">days</span>
