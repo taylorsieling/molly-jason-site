@@ -1,7 +1,7 @@
 <template>
   <div class="-my-6">
     <div class="relative pl-8 sm:pl-32 py-6 group mb-2">
-      <div class="text-sm italic mb-1 sm:mb-0">6:30 PM</div>
+      <div class="text-sm italic mb-1 sm:mb-0">TBA</div>
       <div :class="timeline">
         <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-white bg-primary rounded-full">April 25</time>
         <div class="text-xl text-stone-900 playfair uppercase tracking-wider">Happy Hour</div>
@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="relative pl-8 sm:pl-32 py-6 group mb-2">
-      <div class="text-sm italic mb-1 sm:mb-0">8:00 PM</div>
+      <div class="text-sm italic mb-1 sm:mb-0">4:00 PM</div>
       <div :class="timeline">
         <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-white bg-primary rounded-full">April 26</time>
         <div class="text-xl text-stone-900 playfair uppercase tracking-wider">Ceremony</div>
@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="relative pl-8 sm:pl-32 py-6 group">
-      <div class="text-sm italic mb-1 sm:mb-0">7:00 PM</div>
+      <div class="text-sm italic mb-1 sm:mb-0">6:00 PM</div>
       <div :class="timeline">
         <time class="sm:absolute left-0 translate-y-0.5 md:hidden inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-white bg-primary rounded-full">April 26</time>
         <div class="text-xl text-stone-900 playfair uppercase tracking-wider">Reception</div>
