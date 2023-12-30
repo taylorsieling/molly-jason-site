@@ -1,16 +1,16 @@
 <template>
-  <div class="flex flex-wrap md:flex-nowrap justify-start md:justify-around mx-auto my-12 w-10/12">
+  <div class="flex flex-wrap md:flex-nowrap justify-start md:justify-around mx-auto w-10/12">
     <div class="basis-1/2 p-4 md:p-6 text-center bg-primary text-white">
-      <p class="mb-5 uppercase playfair tracking-wider">
+      <p class="mb-5 uppercase cormorant tracking-wider">
         <slot name="supertitle" ></slot>
       </p>
-      <p class="mb-10 text-6xl script italic">
+      <p class="">
         <slot name="title"></slot>
       </p>
-      <p class="mb-5 text-3xl uppercase tracking-widest font-light playfair">
+      <p class="mb-5 text-3xl uppercase tracking-widest">
         <slot name="subtitle"></slot>
       </p>
-      <p class="mb-5 text-xl">
+      <p class="mb-5 text-xl cormorant tracking-wider">
         <slot name="content"></slot>
       </p>
     </div>
