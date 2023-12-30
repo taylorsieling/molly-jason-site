@@ -2,9 +2,9 @@
   <header>
     <nav class="fixed w-full bg-white shadow-lg py-3 px-5 m-auto top-0 z-10 animated">
       <div class="flex items-center justify-between">
-        <div>
-          <router-link to="/" class="script text-4xl/none p-4">
-            <span>Molly & Jason</span>
+        <div class="w-64">
+          <router-link to="/" >
+            <FirstNames />
           </router-link>
         </div>
         <div class="hidden lg:flex uppercase tracking-widest text-xs">
@@ -27,10 +27,11 @@
 
 <script>
   import NavLinks from './NavLinks.vue'
+  import FirstNames from '../assets/FirstNames.vue'
 
   export default {
     name: "nav-toggler",
-    components: { NavLinks },
+    components: { NavLinks, FirstNames },
     data() {
       return {
         navLink: 'link relative no-underline px-4 py-1',

@@ -5,9 +5,11 @@
       <div class="hero-content text-center text-white">
         <div>
           <div class="mb-12">
-            <p class="text-2xl uppercase tracking-widest mb-6">Save the Date</p>        
-            <h1 class="text-8xl playfair uppercase tracking-wider mb-6">Molly & Jason</h1>
-            <p class="text-xl uppercase tracking-widest mb-12">are tying the knot</p>
+            <p class="text-2xl uppercase cormorant tracking-widest mb-6">Save the Date</p>
+            <div class="w-full h-full">
+              <FirstNames id="hero-svg" alt="Molly and Jason"/>
+            </div>
+            <p class="text-xl uppercase cormorant tracking-widest mt-6 mb-12">are tying the knot</p>
             <p class="text-6xl cormorant italic tracking-wider">April 26, 2025</p>  
           </div>
         </div>
@@ -50,10 +52,10 @@
   <section id="invitation">
     <div class="text-center p-12">
       <div class="bg-white w-2/3 py-16 px-12 mx-auto">
-        <p class="mb-5 uppercase playfair tracking-wider">You are cordially invited to the wedding of</p>
-        <h1 class="mb-10 text-6xl script italic">Molly Gosky & Jason Young</h1>
-        <h2 class="mb-5 text-3xl uppercase tracking-widest font-light playfair">April 26, 2025</h2>
-        <h2 class="mb-5 text-xl">Charleston, South Carolina</h2>
+        <p class="mb-5 uppercase cormorant tracking-wider">You are cordially invited to the wedding of</p>
+        <div><FullNames /></div>
+        <h2 class="mb-5 text-3xl uppercase tracking-widest">April 26, 2025</h2>
+        <h2 class="mb-5 text-xl cormorant tracking-wider">Charleston, South Carolina</h2>
       </div>
     </div>
   </section>
@@ -62,23 +64,27 @@
 <script lang="ts">
 import VueCountdown from '@chenfengyuan/vue-countdown';
 import TwoColSection from '../components/TwoColSection.vue'
+import FullNames from '../assets/FullNames.vue';
+import FirstNames from '../assets/FirstNames.vue';
 
 export default {
-  components: { VueCountdown, TwoColSection },
+  components: { VueCountdown, TwoColSection, FullNames, FirstNames },
   data() {
     const now = new Date();
     const weddingDay = new Date('April 26, 2025 18:00:00');
 
     return {
       btnClass: 'cormorant italic tracking-widest border py-2 px-6 hover:scale-110 transition duration-300 ease-in-out',
-      cdClass: 'flex flex-col basis-1/4 justify-center uppercase p-2',
+      cdClass: 'flex flex-col basis-1/4 justify-center uppercase mb-8 p-2',
       rightImage: '/images/mj-beachlaugh.jpg',
-      time: weddingDay - now,
+      time: weddingDay.getTime() - now.getTime(),
     };
   },
 };
 </script>
 
 <style>
-
+  #hero-svg {
+    width: 600px;
+  }
 </style>
