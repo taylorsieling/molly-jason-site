@@ -1,15 +1,15 @@
 <template>
-  <section id="hero" class="h-screen">
+  <section id="hero" class="h-screen max-w-full">
     <div class="hero h-full bg-top bg-cover" style="background-image: url(/images/mj-home.jpg);">
       <div class="hero-overlay bg-slate-700/50"></div>
       <div class="hero-content text-center text-white">
-        <div>
+        <div class="max-w-2xl">
           <div class="mb-12">
-            <p class="text-2xl uppercase cormorant tracking-widest mb-6">Save the Date</p>
+            <p class="text-2xl uppercase cormorant tracking-widest mb-4">Save the Date</p>
             <div class="w-full h-full">
-              <FirstNames id="hero-svg" alt="Molly and Jason"/>
+              <FirstNames id="hero-svg" class="max-w-md md:max-w-xl" alt="Molly and Jason"/>
             </div>
-            <p class="text-xl uppercase cormorant tracking-widest mt-6 mb-12">are tying the knot</p>
+            <p class="text-xl uppercase cormorant tracking-widest mt-4 mb-12">are tying the knot</p>
             <p class="text-6xl cormorant italic tracking-wider">April 26, 2025</p>  
           </div>
         </div>
@@ -126,7 +126,11 @@ export default {
 
 <style>
   #hero-svg {
-    width: 600px;
+    width: 400px;
+  }
+
+  .hero-content {
+    max-width: 5rem;
   }
 
   .carousel-item > .object-cover {

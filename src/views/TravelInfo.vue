@@ -6,7 +6,7 @@
     <template #supertitle>We are so excited to have all of our favorite people in one place!</template>
     <template #title>Charleston, South Carolina</template>
     <template #content>
-      As we get closer to the big day, we will share plenty of information to make your travel as easy as possible, including lodging recommendations, transporation information, and the best ways to get around Charleston. We will even put together a guide to our favorite Charleston restaurants, hangouts, and activities. 
+      As we get closer to the big day, we will share plenty of information to make your travel as easy as possible, including lodging recommendations, transportation information, and the best ways to get around Charleston. We will even put together a guide to our favorite Charleston restaurants, hangouts, and activities. 
     </template>
   </CenteredTextSection>
   <hr>
