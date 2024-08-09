@@ -6,7 +6,7 @@
         <div class="max-w-2xl">
           <div class="mb-12">
             <p class="text-2xl uppercase cormorant tracking-widest mb-4">Save the Date</p>
-            <div class="w-full h-full">
+            <div class="w-full h-full p-4">
               <FirstNames id="hero-svg" class="max-w-md md:max-w-xl" alt="Molly and Jason"/>
             </div>
             <p class="text-xl uppercase cormorant tracking-widest mt-4 mb-12">are tying the knot</p>
