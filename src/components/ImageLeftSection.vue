@@ -1,11 +1,11 @@
 <template>
   <div class="flex flex-wrap md:flex-nowrap justify-start md:justify-around">
-    <div class="basis-1/3 p-2 md:p-6">
+    <div class="md:basis-1/3 md:p-6">
       <img id="side-image" class="sharp-left" :src=imgSrc>
     </div>
-    <div class="basis-2/3 p-2 md:p-6 mt-4 md:mt-0">
+    <div class="md:basis-2/3 md:p-6 mt-4 md:mt-0 text-center md:text-left">
       <div class="min-w-3 mt-8">
-        <h2 class="text-sm uppercase tracking-wide mb-4">
+        <h2 class="text-sm uppercase tracking-wide mb-4 ">
           <slot name="supertitle"></slot>
         </h2>
         <h3 class="cormorant text-6xl mb-4">

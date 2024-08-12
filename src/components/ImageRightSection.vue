@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-wrap-reverse md:flex-nowrap justify-end md:justify-around text-end">
-    <div class="basis-2/3 p-2 md:px-8 mt-4 md:mt-0">
+    <div class="md:basis-2/3 md:px-8 mt-4 md:mt-0 text-center md:text-right">
       <div class="min-w-3 mt-8">
         <h2 class="text-sm uppercase tracking-wide mb-4">
           <slot name="supertitle"></slot>
@@ -13,7 +13,7 @@
         </p>
       </div>
     </div>
-    <div class="basis-1/3 p-2 md:px-8">
+    <div class="md:basis-1/3 md:px-8">
       <img id="side-image" class="sharp-right" :src=imgSrc>
     </div>
   </div>
