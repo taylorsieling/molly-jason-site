@@ -7,13 +7,13 @@
     <template #title>Charleston, South Carolina</template>
     <template #content>
       As we get closer to the big day, we will share plenty of information to make your travel as easy as possible, including lodging recommendations, transportation information, and the best ways to get around Charleston. We will even put together a guide to our favorite Charleston restaurants, hangouts, and activities. 
-      <div class="mt-2">
+      <!-- <div class="mt-2">
         <ul class="flex text-center align-items-center">
           <li><a href="#venue">The Venue</a></li>
           <li><a>Lodging</a></li>
           <li><a>Item 3</a></li>
         </ul>
-      </div>
+      </div> -->
     </template>
   </CenteredTextSection>
   <hr>
