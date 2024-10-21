@@ -42,7 +42,7 @@
     <p class="">* * *</p>
     <div class="flex flex-col lg:flex-row justify-center text-center">
       <div class="lg:basis-1/3 m-2 p-2">
-        <img class="rounded-xl mb-3 h-40" src="https://cache.marriott.com/content/dam/marriott-renditions/CHSMT/chsmt-exterior-0001-hor-wide.jpg?output-quality=70&interpolation=progressive-bilinear&downsize=1336px:*">
+        <img class="rounded-xl mb-3 mx-auto h-40 w-full object-cover md:w-3/4" src="https://cache.marriott.com/content/dam/marriott-renditions/CHSMT/chsmt-exterior-0001-hor-wide.jpg?output-quality=70&interpolation=progressive-bilinear&downsize=1336px:*">
         <h4 class="text-4xl cormorant mb-3">SpringHill Suites by Marriot</h4>
         <p class="text-sm mb-2">
           245 Magrath Darby Blvd <br>
@@ -52,7 +52,7 @@
         <a href="https://www.marriott.com/en-us/hotels/chsmt-springhill-suites-charleston-mount-pleasant/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" class="px-5 py-3 bg-white text-primary italic text-bold hover:bg-primary hover:text-white hover:border-2">Reservations</a>
       </div>
       <div class="lg:basis-1/3 m-2 mt-12 md:mt-2 p-2">
-        <img class="rounded-xl mb-3 h-40 w-full object-cover" src="https://www.hilton.com/im/en/CHSSCES/15644848/es-chssces-night-exterior.jpg?impolicy=crop&cw=5000&ch=3255&gravity=NorthWest&xposition=0&yposition=40&rw=768&rh=500">
+        <img class="rounded-xl mb-3 mx-auto h-40 w-full object-cover md:w-3/4" src="https://www.hilton.com/im/en/CHSSCES/15644848/es-chssces-night-exterior.jpg?impolicy=crop&cw=5000&ch=3255&gravity=NorthWest&xposition=0&yposition=40&rw=768&rh=500">
         <h4 class="text-4xl cormorant mb-3">Embassy Suites by Hilton</h4>
         <p class="text-sm mb-2">
           100 Ferry Wharf Road <br>
@@ -62,7 +62,7 @@
         <a href="https://www.hilton.com/en/hotels/chssces-embassy-suites-charleston-harbor-mt-pleasant/rooms/" class="px-5 py-3 bg-white text-primary italic text-bold hover:bg-primary hover:text-white hover:border-2">Reservations</a>
       </div>
       <div class="lg:basis-1/3 m-2 mt-12 md:mt-2 p-2">
-        <img class="rounded-xl mb-3 h-40 w-full object-cover" src="https://www.charlestonharborresort.com/files/3792/img-beachclub-002.jpg">
+        <img class="rounded-xl mb-3 mx-auto h-40 w-full object-cover md:w-3/4" src="https://www.charlestonharborresort.com/files/3792/img-beachclub-002.jpg">
         <h4 class="text-4xl cormorant mb-3">Charleston Harbor Resort & Marina</h4>
         <p class="text-sm mb-2">
           20 Patriots Point Rd <br>
