@@ -48,7 +48,7 @@
           245 Magrath Darby Blvd <br>
           Mt Pleasant, SC 29464
         </p>
-        <p class="italic text-sm mb-4">Price Range: $</p>
+        <p class="italic text-sm mb-8">Price Range: $</p>
         <a href="https://www.marriott.com/en-us/hotels/chsmt-springhill-suites-charleston-mount-pleasant/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" class="px-5 py-3 bg-white text-primary italic text-bold hover:bg-primary hover:text-white hover:border-2">Reservations</a>
       </div>
       <div class="lg:basis-1/3 m-2 mt-12 md:mt-2 p-2">
@@ -58,7 +58,7 @@
           100 Ferry Wharf Road <br>
           Mt Pleasant, SC 29464
         </p>
-        <p class="italic text-sm mb-4">Price Range: $</p>
+        <p class="italic text-sm mb-8">Price Range: $</p>
         <a href="https://www.hilton.com/en/hotels/chssces-embassy-suites-charleston-harbor-mt-pleasant/rooms/" class="px-5 py-3 bg-white text-primary italic text-bold hover:bg-primary hover:text-white hover:border-2">Reservations</a>
       </div>
       <div class="lg:basis-1/3 m-2 mt-12 md:mt-2 p-2">
@@ -68,7 +68,7 @@
           20 Patriots Point Rd <br>
           Mt Pleasant, SC 29464
         </p>
-        <p class="italic text-sm mb-4">Price Range: $$</p>
+        <p class="italic text-sm mb-8">Price Range: $$</p>
         <a href="https://bookings.travelclick.com/110419?adobe_mc=MCMID=10089339946301935712685362941743018248|MCORGID=1C1238B352785AA60A490D4C%40AdobeOrg|TS=1723506574&domain=www.charlestonharborresort.com#/guestsandrooms" class="px-5 py-3 bg-white text-primary italic text-bold hover:bg-primary hover:text-white hover:border-2">Reservations</a>
       </div>
     </div>
