@@ -3,8 +3,9 @@
     <li><router-link to="/" :class=navLink >Home</router-link></li>
     <li><router-link to="/our-story" :class=navLink>Our Story</router-link></li>
     <li><router-link to="/schedule" :class=navLink>Schedule</router-link></li>
-    <li><router-link to="/rsvp" :class=navLink>RSVP</router-link></li>
     <li><router-link to="/travel-info" :class=navLink>Travel</router-link></li>
+    <li><router-link to="/faqs" :class=navLink>FAQs</router-link></li>
+    <li><router-link to="/rsvp" :class=navLink>RSVP</router-link></li>
     <!-- <li><router-link to="/registry" :class=navLink>Registry</router-link></li> -->
   </ul>
 </template>
