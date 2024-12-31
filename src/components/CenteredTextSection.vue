@@ -10,6 +10,7 @@
       <p class="text-md leading-relaxed mb-4">
         <slot name="content"></slot>
       </p>
+      <div class="mt-2"><slot name="body"></slot></div>
     </div>
   </div>
 </template>
