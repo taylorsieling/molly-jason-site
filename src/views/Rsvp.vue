@@ -2,7 +2,7 @@
   <PageTitle :titleImage=titleImage overlayClass="bg-slate-600/30">
     <template #title>RSVP</template>
   </PageTitle>
-  <CenteredTextSection class="my-8 p-2 md:py-4 md:px-48" v-if="!showForm">
+  <CenteredTextSection class="my-4 p-2 md:py-4 md:px-48" v-if="!showForm">
     <template #title>You're Invited!</template>
     <template #content>Please enter the name on your invitation to RSVP</template>
     <template #body>
@@ -24,11 +24,12 @@
           <button class="btn btn-block bg-primary text-white" @click="filteredGuests">Find Reservation</button>
         </div>
         <div>
-          <p class="text-md leading-relaxed mb-4">Select your party</p>
+          <p v-if="showRes" class="text-lg italic leading-relaxed mb-8 mt-12">Please select your party to RSVP</p>
           <ul>
-            <li v-for="reservation in reservations" @click="showRsvpForm(reservation)">
+            <li v-for="(reservation, i) in reservations" @click="showRsvpForm(reservation)">
               <p>Reservation for:</p>
               <span v-for="(guest, index) in reservation.guests" :key=index>{{ guest.firstName }} {{ guest.lastName }}{{ index < reservation.guests.length - 1 ? ', ' : '' }}</span>
+              <div v-if="i < reservations.length - 1 ? ', ' : '' " class="divider"></div>
             </li>
           </ul>
         </div>
@@ -54,6 +55,7 @@ export default {
       reservations: [],
       searchTerm: '',
       showForm: false,
+      showRes: false,
       titleImage: 'background-image: url(/images/mj-rsvp.jpg)',
     };
   },
@@ -64,14 +66,13 @@ export default {
 
       let reservations = this.guestList.filter(r => r.guests.some(g => g.lastName.toLowerCase() === searchName));
       this.reservations = reservations
-      console.log(reservations)
+      this.showRes = true
     },
   },
 
   methods: {
     showRsvpForm(reservation) {
       this.selectedRes = reservation
-      console.log('this res:', this.selectedRes)
       this.showForm = true
     }
   }
@@ -80,7 +81,3 @@ export default {
 </script>
 
 <style></style>
-
-#rsvp to welcome party
-#rsvp to wedding
-#verify plus ones upon rsvp 
