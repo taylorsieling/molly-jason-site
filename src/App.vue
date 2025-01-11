@@ -22,9 +22,11 @@ const app = initializeApp(firebaseConfig);
 </script>
 
 <template>
-  <NavBar />
-  <main class="bg-white w-full mt-12 before:static after:static flex-grow">
-    <RouterView />
-  </main>
-  <Footer class="mt-auto"></Footer>
+  <div class="flex flex-col min-h-screen justify-between">
+    <NavBar />
+    <main class="bg-white w-full mt-12 flex-grow">
+      <RouterView />
+    </main>
+    <Footer></Footer>
+  </div>
 </template>

@@ -37,14 +37,14 @@
     </template>
   </CenteredTextSection>
 
-  <RsvpForm class="my-8 p-4 md:py-4 md:px-48" v-if="showForm" :selectedRes="selectedRes"></RsvpForm>
+  <RsvpForm class="my-8 p-4 md:py-4 md:px-48" v-if="showForm" :selectedRes="selectedRes" :resID="resID"></RsvpForm>
 </template>
 
 <script>
 import PageTitle from '../components/PageTitle.vue';
 import CenteredTextSection from '../components/CenteredTextSection.vue';
 import RsvpForm from '../components/RsvpForm.vue';
-import { getDatabase, ref, query, orderByChild, equalTo, onValue} from "firebase/database";
+import { getDatabase, ref, onValue} from "firebase/database";
 
 export default {
   components: { CenteredTextSection, PageTitle, RsvpForm},
@@ -53,6 +53,7 @@ export default {
       guestList: [],
       selectedRes: null,
       reservations: [],
+      resID: '',
       searchTerm: '',
       showForm: false,
       showRes: false,
@@ -70,6 +71,7 @@ export default {
       snapshot.forEach((childSnapshot) => {
         console.log('snapshot', childSnapshot.val())
         this.guestList.push(childSnapshot.val())
+        this.resID = (childSnapshot.key)
       });
     });
   },
