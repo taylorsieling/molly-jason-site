@@ -1,10 +1,10 @@
 <template>
-  <PageTitle :titleImage=titleImage overlayClass="bg-slate-600/30">
+  <!-- <PageTitle :titleImage=titleImage overlayClass="bg-slate-600/30">
     <template #title>RSVP</template>
-  </PageTitle>
+  </PageTitle> -->
   <CenteredTextSection class="my-4 p-2 md:py-4 md:px-48" v-if="!showForm">
     <template #title>You're Invited!</template>
-    <template #content>Please enter the name on your invitation to RSVP</template>
+    <template #content>Please enter your <span class="font-bold">last name</span> to find your reservation.</template>
     <template #body>
       <div class="md:w-1/2 md:m-auto">
         <div>
@@ -45,12 +45,13 @@ import PageTitle from '../components/PageTitle.vue';
 import CenteredTextSection from '../components/CenteredTextSection.vue';
 import RsvpForm from '../components/RsvpForm.vue';
 import guestList from '../assets/guestlist.js';
+import { getDatabase, ref, query, orderByChild, equalTo, onValue} from "firebase/database";
 
 export default {
   components: { CenteredTextSection, PageTitle, RsvpForm},
   data() {
     return {
-      guestList: guestList,
+      guestList: [],
       selectedRes: null,
       reservations: [],
       searchTerm: '',
@@ -60,21 +61,36 @@ export default {
     };
   },
 
-  computed: {
-    filteredGuests() {
-      const searchName = this.searchTerm.toLowerCase();
+  mounted() {
+    const db = getDatabase();
+    const guestListRef = ref(db, 'reservations');
 
-      let reservations = this.guestList.filter(r => r.guests.some(g => g.lastName.toLowerCase() === searchName));
-      this.reservations = reservations
-      this.showRes = true
-    },
+    console.log('mounted')
+
+    onValue(guestListRef, (snapshot) => {
+      snapshot.forEach((childSnapshot) => {
+        console.log('snapshot', childSnapshot.val())
+        this.guestList.push(childSnapshot.val())
+      });
+    });
   },
 
   methods: {
     showRsvpForm(reservation) {
       this.selectedRes = reservation
       this.showForm = true
-    }
+    },    
+
+    filteredGuests() {
+      const searchName = this.searchTerm.toLowerCase();
+
+      let reservations = this.guestList.filter(r => r.guests.some(g => g.lastName.toLowerCase() === searchName));
+      this.reservations = reservations
+      this.showRes = true
+      console.log(this.reservations[0])
+      console.log('resies', this.reservations)
+
+    },
   }
 
 };
