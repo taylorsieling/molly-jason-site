@@ -44,7 +44,6 @@
 import PageTitle from '../components/PageTitle.vue';
 import CenteredTextSection from '../components/CenteredTextSection.vue';
 import RsvpForm from '../components/RsvpForm.vue';
-import guestList from '../assets/guestlist.js';
 import { getDatabase, ref, query, orderByChild, equalTo, onValue} from "firebase/database";
 
 export default {
