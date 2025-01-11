@@ -13,7 +13,7 @@
       </p>
       <p class="text-sm italic mb-1">Click on the logos below to access our online registries.</p>
     </div>
-    <div class="flex flex-wrap md:flex-nowrap justify-center md:justify-around items-stretch mx-auto my-8 md:w-10/12">
+    <div class="flex flex-wrap md:flex-nowrap justify-center md:justify-around items-stretch mx-auto my-8 md:w-8/12">
       <a class="basis-1/2 border rounded-lg p-6 m-2 text-center flex items-center justify-center" href="https://www.target.com/gift-registry/gift/mollyandjason2025" target="_blank">
         <img src="/public/images/target.png" class="mx-auto my-auto" alt="Target">
       </a>
