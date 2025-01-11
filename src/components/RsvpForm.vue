@@ -4,7 +4,7 @@
       <p class="text-xl italic leading-relaxed mb-6">Thank you for your RSVP!</p>
       <p class="text-lg mb-4">Please visit our other pages for more information about our Big Day:</p>
       <div class="flex flex-col justify-center items-center">
-        <router-link to="/registry" class="btn btn-wide m-2" >Registy</router-link>
+        <router-link to="/registry" class="btn btn-wide m-2" >Registry</router-link>
         <router-link to="/faqs" class="btn btn-wide m-2" >FAQs</router-link>
         <router-link to="/travel-info" class="btn btn-wide m-2" >Travel</router-link>
       </div>
