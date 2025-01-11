@@ -51,7 +51,7 @@ import RsvpForm from '../components/RsvpForm.vue';
 import { getDatabase, ref, onValue} from "firebase/database";
 
 export default {
-  components: { CenteredTextSection, PageTitle, RsvpForm},
+  components: { CenteredTextSection, PageTitle },
   data() {
     return {
       guestList: [],
@@ -95,3 +95,4 @@ export default {
 </script>
 
 <style></style>
+
