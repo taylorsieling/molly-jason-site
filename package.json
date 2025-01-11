@@ -10,15 +10,16 @@
   "dependencies": {
     "@chenfengyuan/vue-countdown": "^2.1.2",
     "aos": "^2.3.4",
+    "firebase": "^11.1.0",
     "vue": "^3.3.7",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^2.3.3",
+    "@vitejs/plugin-vue": "^5.2.1",
     "autoprefixer": "^10.4.16",
     "daisyui": "^3.9.4",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5",
-    "vite": "^2.9.9"
+    "vite": "^6.0.7"
   }
 }
