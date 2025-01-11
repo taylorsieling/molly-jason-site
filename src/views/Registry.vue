@@ -15,10 +15,10 @@
     </div>
     <div class="flex flex-wrap md:flex-nowrap justify-center md:justify-around items-stretch mx-auto my-8 md:w-10/12">
       <a class="basis-1/2 border rounded-lg p-6 m-2 text-center flex items-center justify-center" href="https://www.target.com/gift-registry/gift/mollyandjason2025" target="_blank">
-        <img src="/public/images/target.png" class="mx-auto my-auto">
+        <img src="/public/images/target.png" class="mx-auto my-auto" alt="Target">
       </a>
       <a class="basis-1/2 border rounded-lg p-6 m-2 text-center flex items-center justify-center"
-      href="https://www.crateandbarrel.com/gift-registry/molly-gosky/r6798783" target="_blank">
+      href="https://www.crateandbarrel.com/gift-registry/molly-gosky/r6798783" target="_blank" alt="Crate & Barrel">
         <img src="/public/images/cb.png" class="mx-auto my-auto">
       </a>
     </div>
