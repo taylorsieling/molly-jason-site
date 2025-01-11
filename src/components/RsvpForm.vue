@@ -1,9 +1,15 @@
 <template>
   <div class="text-center p-4 md:py-4 md:px-8">
-    <div class="pt-12 p-2 md:p-8 md:max-w-5xl mx-auto">
-      <!-- <section v-if="formResponse" class="notification">
-        <h2>{{ formResponse }}</h2>
-      </section> -->
+    <div v-if="formSubmitted" class="pt-12 p-2 md:p-8 md:max-w-5xl mx-auto">
+      <p class="text-xl italic leading-relaxed mb-6">Thank you for your RSVP!</p>
+      <p class="text-lg mb-4">Please visit our other pages for more information about our Big Day:</p>
+      <div class="flex flex-col justify-center items-center">
+        <router-link to="/registry" class="btn btn-wide m-2" >Registy</router-link>
+        <router-link to="/faqs" class="btn btn-wide m-2" >FAQs</router-link>
+        <router-link to="/travel-info" class="btn btn-wide m-2" >Travel</router-link>
+      </div>
+    </div>
+    <div v-else class="pt-12 p-2 md:p-8 md:max-w-5xl mx-auto">
       <p class="text-xl italic leading-relaxed mb-8"> RSVP for {{ selectedRes.reservationName }} </p>
       <div class="mt-2 mx-auto">
         <form name="rsvp" method="post" @submit.prevent="submitForm" data-netlify="true" data-netlify-honeypot="bot-field">
@@ -41,43 +47,35 @@
 </template>
 
 <script>
+  import { getDatabase, ref, update } from "firebase/database";
 
   export default {
     props: {
+      resID: String,
       selectedRes: Object
     },
 
     methods: {
-      encode(data) {
-        return Object.keys(data)
-          .map(
-            key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-          )
-          .join('&');
-      },
+      submitForm(userId, ) {
+        const db = getDatabase();
 
-      submitForm() {
-        console.log('data', this.formData)
-        fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: this.encode({ 'form-name': 'rsvp', ...this.formData }),
-        })
-        .then(() => {
-          console.log('success')
-          this.formResponse = '✅ Your response was successfully submitted!'
-        })
-        .catch(error => {
-          console.log('error', error)
-          this.formResponse = `❌ There was an error submitting your response: ${error.message}. Please refresh to try again.`
-        })
+        const resRef = ref(db, `reservations/${this.resID}`)
+        update(resRef, this.formData)
+          .then(() => {
+            console.log("Success")
+            this.formSubmitted = true
+            this.$emit('clearId')
+          })
+          .catch((error) => {
+            console.log('Error: ', error)
+          })
       },
     },
 
     data() {
       return {
+        formSubmitted: false,
         formData: this.selectedRes,
-        formResponse: ''
       }
     }  
 }
