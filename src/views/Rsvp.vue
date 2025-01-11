@@ -23,8 +23,12 @@
           </label>
           <button class="btn btn-block bg-primary text-white" @click="filteredGuests">Find Reservation</button>
         </div>
-        <div>
-          <p v-if="showRes" class="text-lg italic leading-relaxed mb-8 mt-12">Please select your party to RSVP</p>
+        <div v-if="showRes">
+          <p v-if="reservations.length > 0" class="text-lg italic leading-relaxed mb-8 mt-12">Please select your party to RSVP</p>
+          <div v-else>
+            <p class="text-md italic leading-relaxed mb-2 mt-12">We did not find a reservation under that name. <span class="font-bold">Please enter the last name of any of your party's members.</span></p>
+            <p class="text-sm" mb-8>If you continue to experience issues, please reach out to the bride or groom.</p>
+          </div>
           <ul>
             <li v-for="(reservation, i) in reservations" @click="showRsvpForm(reservation)">
               <p>Reservation for:</p>
@@ -37,7 +41,7 @@
     </template>
   </CenteredTextSection>
 
-  <RsvpForm class="my-8 p-4 md:py-4 md:px-48" v-if="showForm" :selectedRes="selectedRes" :resID="resID"></RsvpForm>
+  <RsvpForm class="my-8 p-4 md:py-4 md:px-48" v-if="showForm" :selectedRes="selectedRes" :resID="resID" @clear-id="this.resID = ''"></RsvpForm>
 </template>
 
 <script>
@@ -65,11 +69,8 @@ export default {
     const db = getDatabase();
     const guestListRef = ref(db, 'reservations');
 
-    console.log('mounted')
-
     onValue(guestListRef, (snapshot) => {
       snapshot.forEach((childSnapshot) => {
-        console.log('snapshot', childSnapshot.val())
         this.guestList.push(childSnapshot.val())
         this.resID = (childSnapshot.key)
       });
@@ -88,9 +89,6 @@ export default {
       let reservations = this.guestList.filter(r => r.guests.some(g => g.lastName.toLowerCase() === searchName));
       this.reservations = reservations
       this.showRes = true
-      console.log(this.reservations[0])
-      console.log('resies', this.reservations)
-
     },
   }
 };
