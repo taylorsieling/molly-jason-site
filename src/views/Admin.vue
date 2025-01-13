@@ -2,7 +2,7 @@
   <div class="text-center p-4 md:py-4 md:px-8">
     <div class="pt-12 p-2 md:p-8 md:max-w-5xl mx-auto">
       <div class="mt-2 mx-auto">
-        <form name="guestList" method="post" @submit.prevent="submitForm" class="flex flex-col items-center">
+        <form name="guestList" method="post" @submit.prevent="submitForm" ref="myForm" class="flex flex-col items-center">
           <input type="text" v-model="reservation.reservationName" placeholder="Reservation Name" class="input input-bordered w-full max-w-xs" />
           <div class="form-control">
             <label class="label cursor-pointer w-32">
@@ -30,13 +30,12 @@ import { getDatabase, ref, push, set } from "firebase/database";
 
     methods: {
       submitForm() {
-        console.log('data', this.reservation)
-        console.log('data', this.reservation)
         const db = getDatabase();     
         const reservationRef = ref(db, 'reservations');
         const newGuest = push(reservationRef);
         
         set(newGuest, this.reservation)
+        this.$refs.myForm.reset().then(this.reservation.guests = [])
       },
 
       addGuest() {

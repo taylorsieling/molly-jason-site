@@ -56,10 +56,12 @@
     },
 
     methods: {
-      submitForm(userId, ) {
+      submitForm() {
         const db = getDatabase();
+        const resRef = ref(db, `reservations/${this.selectedRes.id}`)
 
-        const resRef = ref(db, `reservations/${this.resID}`)
+        this.selectedRes.responded = true;
+
         update(resRef, this.formData)
           .then(() => {
             console.log("Success")

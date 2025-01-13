@@ -67,8 +67,10 @@ export default {
 
     onValue(guestListRef, (snapshot) => {
       snapshot.forEach((childSnapshot) => {
-        this.guestList.push(childSnapshot.val())
-        this.resID = (childSnapshot.key)
+        const res = childSnapshot.val()
+        const id = childSnapshot.key
+        res.id = id
+        this.guestList.push(res)
       });
     });
   },
@@ -91,4 +93,3 @@ export default {
 </script>
 
 <style></style>
-
