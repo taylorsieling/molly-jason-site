@@ -1,7 +1,4 @@
 <template>
-  <!-- <PageTitle :titleImage=titleImage overlayClass="bg-slate-600/30">
-    <template #title>RSVP</template>
-  </PageTitle> -->
   <CenteredTextSection class="my-4 p-2 md:py-4 md:px-48" v-if="!showForm">
     <template #title>You're Invited!</template>
     <template #content>Please enter your <span class="font-bold">last name</span> to find your reservation.</template>
@@ -45,13 +42,12 @@
 </template>
 
 <script>
-import PageTitle from '../components/PageTitle.vue';
 import CenteredTextSection from '../components/CenteredTextSection.vue';
-import RsvpForm from '../components/RsvpForm.vue';
 import { getDatabase, ref, onValue} from "firebase/database";
+import RsvpForm from '../components/RsvpForm.vue';
 
 export default {
-  components: { CenteredTextSection, PageTitle, RsvpForm },
+  components: { CenteredTextSection, RsvpForm },
   data() {
     return {
       guestList: [],
@@ -71,8 +67,10 @@ export default {
 
     onValue(guestListRef, (snapshot) => {
       snapshot.forEach((childSnapshot) => {
-        this.guestList.push(childSnapshot.val())
-        this.resID = (childSnapshot.key)
+        const res = childSnapshot.val()
+        const id = childSnapshot.key
+        res.id = id
+        this.guestList.push(res)
       });
     });
   },
@@ -95,4 +93,3 @@ export default {
 </script>
 
 <style></style>
-
