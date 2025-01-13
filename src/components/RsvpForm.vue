@@ -17,7 +17,7 @@
             <div class="flex items-start justify-center gap-4">
               <p class="basis-1/3 pt-2">{{ guest.firstName }} {{ guest.lastName }}</p>
               <div class="basis-2/3">
-                <div v-if="selectedRes.dinnerInvite" id="welcome-dinner" class="form-control">
+                <div v-if="selectedRes.dinnerInvite || guest.dinnerInvite" id="welcome-dinner" class="form-control">
                   <label :for="`${index}-dinner`" class="label cursor-pointer justify-start gap-2">
                     <input :id="`${index}-dinner`" v-model="guest.dinner" type="checkbox" class="checkbox checkbox-sm" name="dinner"/>
                     <span class="label-text">Welcome Dinner</span>

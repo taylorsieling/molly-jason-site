@@ -45,7 +45,7 @@ import { getDatabase, ref, push, set } from "firebase/database";
       },
 
       removeGuest(index) {
-        this.fields.splice(index, 1);
+        this.reservation.guests.splice(index, 1);
       },
     },
 
