@@ -59,7 +59,7 @@
     transition-delay: 150ms;
     transition-duration: 500ms;
     overflow: hidden;
-    height: 150px; 
+    height: 170px; 
     top: 20px;
   }
 
