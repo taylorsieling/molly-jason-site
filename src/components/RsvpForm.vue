@@ -64,12 +64,10 @@
 
         update(resRef, this.formData)
           .then(() => {
-            console.log("Success")
             this.formSubmitted = true
             this.$emit('clearId')
           })
           .catch((error) => {
-            console.log('Error: ', error)
           })
       },
     },
