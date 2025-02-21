@@ -6,7 +6,8 @@ import Registry from "../views/Registry.vue";
 import Rsvp from "../views/Rsvp.vue";
 import TravelInfo from "../views/TravelInfo.vue";
 import Faq from "../views/Faq.vue";
-import Admin from "../views/Admin.vue"
+import Admin from "../views/Admin.vue";
+import Guests from "../views/Guests.vue"
 
 const routes = [
   { path: "/", name: "Home", component: Home },
@@ -16,7 +17,8 @@ const routes = [
   { path: "/travel-info", name: "Travel Info", component: TravelInfo },
   { path: "/registry", name: "Registry", component: Registry },
   { path: "/faqs", name: "FAQs", component: Faq },
-  { path: "/admin", name: "Admin", component: Admin}
+  { path: "/admin", name: "Admin", component: Admin},
+  { path: "/guests", name: "Guests", component: Guests}
 ];
 
 const router = createRouter({
