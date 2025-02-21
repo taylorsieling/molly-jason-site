@@ -16,6 +16,7 @@
               <span v-if="guest.dinner === true" class="badge badge-info badge-sm m-1">Dinner</span>
               <span v-if="guest.party === true" class="badge badge-secondary badge-sm m-1">Party</span>
               <span v-if="guest.ceremony === true" class="badge badge-primary badge-sm m-1">Ceremony</span>
+              <span v-if="guest.dinner === false && guest.party === false && guest.ceremony === false" class="badge badge-neutral badge-sm m-1">Not Attending</span>
             </td>
           </tr>
         </tbody>
